@@ -67,8 +67,8 @@ core.register_ore {
 	clust_scarcity = 20^3,
 	clust_num_ores = 9,
 	clust_size     = 4,
-	y_max          = 80,
-	y_min          = -100
+	y_max          = 50,
+	y_min          = -150
 }
 
 -- Fossil meal
