@@ -232,12 +232,12 @@ local generic_spreadables = {
 -- For saplings this value is halved
 function bonified.apply_fertilizer (guarantee, strength)
 	return function (itemstack, player, pointed)
-		if core.is_protected(pointed.under, player: get_player_name()) then
-			core.record_protection_violation(pointed.under, player: get_player_name())
-			return itemstack
-		end
-		
 		if pointed.type == 'node' then
+			if core.is_protected(pointed.under, player: get_player_name()) then
+				core.record_protection_violation(pointed.under, player: get_player_name())
+				return itemstack
+			end
+			
 			local name = core.get_node(pointed.under).name
 		
 			if core.get_item_group(name, 'sapling') ~= 0 then
