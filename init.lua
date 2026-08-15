@@ -27,6 +27,13 @@ if core.settings: get_bool('bonified.enable_fossil_tools', true) then
 end
 
 -- Armor
+if core.get_modpath 'farming' then
+	local string_def = core.registered_items['farming:string']
+	local groups = string_def.groups
+	groups.string = 1
+	core.override_item('farming:string', {groups = groups})
+end
+
 if core.get_modpath '3d_armor' and core.settings: get_bool('bonified.enable_armor', true) then
 	dofile(bonified.modpath .. '/scripts/armor.lua')
 end

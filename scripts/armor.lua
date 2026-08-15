@@ -12,8 +12,8 @@ if core.settings: get_bool('bonified.enable_bone_tools', true) then
 		core.register_craft {
 			output = 'bonified:bone_bundle',
 			recipe = {
-				{'bonified:bone', 'farming:string', 'bonified:bone'},
-				{'bonified:bone', 'farming:string', 'bonified:bone'}
+				{'bonified:bone', 'group:string', 'bonified:bone'},
+				{'bonified:bone', 'group:string', 'bonified:bone'}
 			}
 		}
 	else
@@ -127,8 +127,8 @@ if core.settings: get_bool('bonified.enable_bone_tools', true) then
 		core.register_craft {
 			output = 'bonified:armor_gloves_bone',
 			recipe = {
-				{'bonified:bone_bundle', 'farming:string', 'bonified:bone_bundle'},
-				{'bonified:bone', 'farming:string', 'bonified:bone'}
+				{'bonified:bone_bundle', 'group:string', 'bonified:bone_bundle'},
+				{'bonified:bone', 'group:string', 'bonified:bone'}
 			}
 		}
 	end
@@ -250,8 +250,8 @@ if core.settings: get_bool('bonified.enable_fossil_tools', true) then
 		core.register_craft {
 			output = 'bonified:armor_gloves_fossil',
 			recipe = {
-				{'bonified:fossil_plate', 'farming:string', 'bonified:fossil_plate'},
-				{'default:bronze_ingot', 'farming:string', 'default:bronze_ingot'}
+				{'bonified:fossil_plate', 'group:string', 'bonified:fossil_plate'},
+				{'default:bronze_ingot', 'group:string', 'default:bronze_ingot'}
 			}
 		}
 	end
